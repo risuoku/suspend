@@ -1,0 +1,32 @@
+package in.domain
+
+import in.Config
+
+trait User {
+  val identity: Int
+  val src_addr: String
+  val username: String
+  val nickname: String
+  val point: Int
+
+  override def toString: String
+}
+
+class UserImpl (
+    _identity: Int,
+    _src_addr: String,
+    _username: String,
+    _nickname: String,
+    _point: Int
+  ) extends User {
+
+  val identity = _identity
+  val src_addr = _src_addr
+  val username = _username
+  val nickname = _nickname
+  val point = _point
+
+  override def toString = {
+    "identity: %d, src_addr: %s, username: %s, nickname: %s, point: %d".format(identity, src_addr, username, nickname, point)
+  }
+}
