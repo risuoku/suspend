@@ -1,0 +1,40 @@
+body:
+  name: 'sample_project'
+  type: 'project'
+  rootdir: ''
+  virtualenv: false
+  children:
+    - name: '.gitignore'
+      type: 'file'
+    - name: 'README.md'
+      type: 'file'
+    - name: 'requirements.txt'
+      type: 'file'
+    - name: 'env.sh'
+      type: 'file'
+    - name: 'config.yml'
+      type: 'file'
+    - name: 'Dockerfile'
+      type: 'file'
+    - name: 'scenarios'
+      type: 'directory'
+      children:
+        - name: 'sample'
+          type: 'directory'
+          children:
+            - name: 'entry.py'
+              type: 'file'
+            - name: 'provider.py'
+              type: 'file'
+            - name: 'scenario.py'
+              type: 'file'
+    - name: '.wataru'
+      type: 'directory'
+      children:
+        - name: 'storage'
+          type: 'directory'
+
+meta:
+  jupyter:
+    install: false
+    config_location: 'default'
